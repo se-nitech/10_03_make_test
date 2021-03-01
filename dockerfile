@@ -2,6 +2,6 @@ FROM python:slim
 
 RUN pip install pylint flake8 coverage \
  && apt -y update \
- && apt -y install git
+ && apt -y install git make
 
 WORKDIR /mnt
