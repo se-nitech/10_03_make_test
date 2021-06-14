@@ -4,3 +4,4 @@ services:
     volumes:
       - ../:/mnt
     tty: true
+    working_dir: /mnt/10_03_make_test
