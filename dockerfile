@@ -1,7 +1,9 @@
 FROM python:slim
 
-RUN pip install pylint flake8 coverage \
-    && apt -y update \
-    && apt -y install git make
+RUN apt -y update && apt -y install git
+RUN pip install pylint flake8 bandit
+RUN pip install pytest coverage
+
+RUN apt -y install make
 
 WORKDIR /mnt
